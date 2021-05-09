@@ -33,6 +33,10 @@ body {
     border-radius: 0;
 }
 
+.btn-warning{
+    color: #fff;
+}
+
 
 /************  Home Section *************/
 .section.home{
@@ -63,7 +67,7 @@ body {
 
 .section.home h1,
 .section.home p {
-    color: black;
+    color: #fff;
 }
 
 @media(max-width: 576px){
