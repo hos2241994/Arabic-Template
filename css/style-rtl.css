@@ -4,15 +4,12 @@ body {
     direction: rtl;
     font-family: 'Tajawal', sans-serif;
     text-align: right;
+    overflow-x: hidden;
 }
 
 .section {
     margin: 30px 0;
     overflow: auto;
-}
-
-.section-title {
-    display: inline-block;
 }
 
 .section-title::after {
@@ -40,29 +37,25 @@ body {
 
 /************  Home Section *************/
 .section.home{
-    overflow: hidden;
     position: relative;
-    margin-top: 70px;
+    margin-top: 0;
 }
 
-.home-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -5555;
-}
 
 .home-img img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
 }
 
 .section .home-item {
-    width: 500px;
-    margin-right: auto;
-    padding-top: 50px;
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.section.home p{
+    width: 65%;
 }
 
 .section.home h1,
@@ -72,11 +65,21 @@ body {
 
 @media(max-width: 576px){
     .section .home-item{
-        width: auto;
+        width: 100%;
+        padding-right: 20px;
     }
 
     .section.home h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin: 10px 0!important;
+    }
+
+    .section.home p{
+        margin: 10px 0!important;
+    }
+
+    .section.home .btn{
+        margin: 0 !important;
     }
 }
 
